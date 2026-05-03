@@ -24,6 +24,27 @@ The project demonstrates how to run a local LLM, connect it to a Python API, and
 - CSS
 - JavaScript
 
+## 🚀 Installation
+
+Follow these steps to run the project locally:
+
+git clone https://github.com/mustafaabdelwahed85-hub/AI-Assistants-.git
+cd AI-Assistants-
+python -m venv venv
+
+# Windows
+venv\Scripts\activate
+
+# Linux / macOS
+# source venv/bin/activate
+
+pip install -r requirements.txt
+ollama run llama3
+
+uvicorn main:app --reload
+
+http://127.0.0.1:8000
+
 ## Project Structure
 
 ```text
