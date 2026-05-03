@@ -1,4 +1,4 @@
-# Local AI Assistant 🤖
+#  AI Assistant 🤖
 
 A simple local AI web application built with FastAPI and Ollama.
 
