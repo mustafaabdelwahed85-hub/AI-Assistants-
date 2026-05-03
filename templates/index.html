@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Local AI Assistant</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="app">
+    <section class="hero">
+      <span class="badge">FastAPI + Ollama</span>
+      <h1>Local AI Assistant 🤖</h1>
+      <p>
+        Run a local LLM, ask questions, and analyze job descriptions using a simple AI agent.
+      </p>
+    </section>
+
+    <section class="panel">
+      <div class="tabs">
+        <button class="tab-btn active" onclick="showTab('ask', this)">Ask AI</button>
+        <button class="tab-btn" onclick="showTab('job', this)">Job Analyzer</button>
+      </div>
+
+      <div id="askTab" class="card">
+        <h2>Ask AI</h2>
+        <p>Ask the local model anything.</p>
+        <textarea id="askInput" placeholder="Example: Explain REST APIs simply..."></textarea>
+        <button class="primary-btn" onclick="askAI()">Send Prompt</button>
+      </div>
+
+      <div id="jobTab" class="card hidden">
+        <h2>Job Analyzer Agent</h2>
+        <p>Paste a job description and get skills, gaps, and a preparation plan.</p>
+        <textarea id="jobInput" placeholder="Paste job description here..."></textarea>
+        <button class="primary-btn" onclick="analyzeJob()">Analyze Job</button>
+      </div>
+
+      <div id="loading" class="loading hidden">
+        <div class="spinner"></div>
+        <span>Thinking...</span>
+      </div>
+
+      <div class="result-card">
+        <div class="result-header">
+          <h2>AI Result</h2>
+          <button class="copy-btn" onclick="copyResult()">Copy</button>
+        </div>
+        <div id="output" class="result-output">
+          No result yet.
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Built by <strong>Mustafa Abdelwahed</strong> • Local AI Demo • 2026</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

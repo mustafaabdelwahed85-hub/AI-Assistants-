@@ -1,0 +1,217 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: #e5e7eb;
+  background:
+    radial-gradient(circle at top left, rgba(59, 130, 246, 0.35), transparent 30%),
+    linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+  min-height: 100vh;
+}
+
+.app {
+  width: 92%;
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 45px 0 25px;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.badge {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: #bfdbfe;
+  font-size: 14px;
+  margin-bottom: 14px;
+}
+
+.hero h1 {
+  font-size: 46px;
+  margin: 10px 0;
+}
+
+.hero p {
+  max-width: 650px;
+  margin: 0 auto;
+  color: #cbd5e1;
+  line-height: 1.7;
+}
+
+.panel {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.18);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+  border-radius: 24px;
+  padding: 26px;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.25);
+}
+
+.tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.tab-btn,
+.primary-btn,
+.copy-btn {
+  border: none;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.tab-btn {
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  color: #e5e7eb;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+  background: linear-gradient(135deg, #3b82f6, #8b5cf6);
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.55);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.card h2,
+.result-card h2 {
+  margin-top: 0;
+}
+
+.card p {
+  color: #cbd5e1;
+}
+
+textarea {
+  width: 100%;
+  min-height: 165px;
+  resize: vertical;
+  padding: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.18);
+  background: rgba(2, 6, 23, 0.65);
+  color: white;
+  font-size: 16px;
+  outline: none;
+  line-height: 1.6;
+}
+
+textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 3px rgba(96,165,250,0.2);
+}
+
+.primary-btn {
+  margin-top: 15px;
+  padding: 13px 22px;
+  border-radius: 14px;
+  color: white;
+  font-weight: 700;
+  background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.primary-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 25px rgba(37,99,235,0.35);
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 20px 0;
+  color: #bfdbfe;
+  font-weight: 600;
+}
+
+.spinner {
+  width: 22px;
+  height: 22px;
+  border: 3px solid rgba(255,255,255,0.25);
+  border-top-color: #60a5fa;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.result-card {
+  margin-top: 24px;
+  background: rgba(2, 6, 23, 0.72);
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid rgba(255,255,255,0.12);
+}
+
+.result-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copy-btn {
+  padding: 9px 14px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.12);
+  color: white;
+}
+
+.copy-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.result-output {
+  margin-top: 15px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #020617;
+  color: #dbeafe;
+  line-height: 1.8;
+  white-space: pre-wrap;
+  border-left: 4px solid #60a5fa;
+}
+
+.hidden {
+  display: none;
+}
+
+footer {
+  text-align: center;
+  padding: 22px;
+  color: #cbd5e1;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 700px) {
+  .hero h1 {
+    font-size: 34px;
+  }
+
+  .tabs {
+    flex-direction: column;
+  }
+
+  .panel {
+    padding: 18px;
+  }
+}
