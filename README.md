@@ -29,7 +29,9 @@ The project demonstrates how to run a local LLM, connect it to a Python API, and
 Follow these steps to run the project locally:
 
 git clone https://github.com/mustafaabdelwahed85-hub/AI-Assistants-.git
+
 cd AI-Assistants-
+
 python -m venv venv
 
 # Windows
